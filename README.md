@@ -39,6 +39,9 @@ WHERE user_id = 'IDFA or GAID'
 AND toDate(created_at) = today()
 ORDER BY created_at DESC
 
+## 📚 Count Users by AB-Group
+
+### 📌 This query provides an overview of the distribution of unique users in different AB-groups.
 
 ```sql
 
