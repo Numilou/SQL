@@ -2,23 +2,19 @@
 Example of using SQL queries 
 Table of contents:
 
-All user activity by id
-Count users by AB-group
-User activity by ads
-Users ANR by ads
-Users activity by ad network used
-Count networks activity
-Users states by social ID
-Users states by any step
-Hello, I already said somewhere that I like to develop in the direction of analytics (there is something incredible about it) and this repository reflects the main typed requests that I use almost every day. In fact, there are many more of them, but I think these are the templates that cover the overwhelming amount of testing.
 
-In the first, I'll tell you a little about the DBMS. My experience is based on the work of ClickHouse, which is described by the OLAP (On-Line Analytical Processing) model. This model is denormalized and focuses on the speed of sampling and financial analytical calculations. Responses to SQL-request take the format of a columnar data structure.
++ Count users by AB-group
++ User activity by ads
++ Users ANR by ads
++ Users activity by ad network used
++ Count networks activity
++ Users states by social ID
++ Users states by any step
+
 
 General info:
 
 • ClickHouse;
-
-• OLAP;
 
 • Columnnar.
 I also want to warn you that any of the data listed below does not in any way reflect current or ever past expenses of any company!
