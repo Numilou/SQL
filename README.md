@@ -126,4 +126,5 @@ GROUP BY ad_revenue_network
 ORDER BY impressions DESC
 
 ```
-
+*Thanks for making it to the end!  
+Regards, Ivanova D.A.*
