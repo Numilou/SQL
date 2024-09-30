@@ -17,8 +17,6 @@ Example of using SQL queries
 - [Users ANR by Ads](#-users-anr-by-ads)
 - [Users Activity by Ad Network](#-users-activity-by-ad-network)
 - [Count Networks Activity](#-count-networks-activity)
-- [Users States by Social ID](#-users-states-by-social-id)
-- [Users States by Any Step](#-users-states-by-any-step)
 
 ---
 
@@ -72,3 +70,60 @@ AND user_id = 'IDFA or GAID' -- user_id_example
 ORDER BY created_at DESC
 
 ```
+## 📚 Users ANR by ads
+
+### 📌 
+
+```sql
+
+SELECT	JSONExtractString(base_parameters,'status') AS ad_status,
+	COUNT(ad_status) AS count
+FROM AdjustData.RealTimeAnalytics
+WHERE toDate(created_at) >= '2024-02-02'
+AND event_name = 'AdView'
+AND ad_status IN ('Fail', 'Complete', 'Start')
+AND app_name = 'ProjectName'
+GROUP BY ad_status
+ORDER BY count DESC
+
+```
+## 📚 Users activity by ad network used
+
+### 📌 
+
+```sql
+SELECT	app_name,
+	created_at,
+	store,
+	ad_network,
+	ad_placement,
+	ad_type
+FROM AdjustData.TableViewExample -- database_and_tableview_example
+WHERE app_name = 'com.CompanyName.ProjectName'
+AND toDate(created_at) = today()
+AND activity_kind = 'ad_revenue'
+AND ad_network = 'Google AdMob' -- for example
+--AND ad_revenue_network IN ('Google AdMob', 'Pangle', 'Google Ad Manager')
+AND user_id = '7952a7a1-26c1-48c9-993e-74b75b4f24a9' -- user_id_example
+ORDER BY created_at DESC
+```
+
+## 📚 Count networks activity
+
+### 📌
+
+```sql
+SELECT	ad_network AS networks,
+	--uniqExact(ad_network),
+	COUNT(ad_network) AS impressions
+FROM AdjustData.TableViewExample -- database_and_tableview_example
+WHERE app_name = 'com.CompanyName.ProjectName'
+AND toDate(created_at) >= '2024-02-15'
+AND activity_kind = 'ad_revenue'
+AND networks <> ''
+--AND os_name = 'android'
+GROUP BY ad_revenue_network
+ORDER BY impressions DESC
+
+```
+
