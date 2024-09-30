@@ -54,7 +54,8 @@ WHERE  ab_group LIKE '%01_001%' -- ab_group_number_example
 GROUP BY app_version, ab_group
 ORDER BY app_version, ab_group
 ```
-📌 User Activity by Ads
+## 📚 User Activity by Ads
+
 ### 📌 As my expertise primarily revolves around mobile game development, the role of advertising monetization is crucial. This includes analyzing user interactions with ads. The following SQL query retrieves the activity details of a specific user regarding ad views:
 
 ```sql
@@ -67,7 +68,7 @@ SELECT	created_at,
 FROM AdjustData.RealTimeAnalytics -- database_and_tableview_example
 WHERE toDate(created_at) = today()
 AND event_name = 'AdView'
-AND user_id = 'EF8C20B5-6CBD-4EF3-A3A5-ADDFCA1DF335' -- user_id_example
+AND user_id = 'IDFA or GAID' -- user_id_example
 ORDER BY created_at DESC
 
 ```
