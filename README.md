@@ -24,7 +24,7 @@ Example of using SQL queries
 
 ## 📚 Detailed Overview
 
-### 📌 All User Activity by ID
+### 📌 All User Activity by ID:
 
 This query retrieves **all analytical events** of a specific user, showing activities like app interactions, event names, and AB-group membership.
 
@@ -42,7 +42,7 @@ ORDER BY created_at DESC
 
 ## 📚 Count Users by AB-Group
 
-### 📌 This query provides an overview of the distribution of unique users in different AB-groups.
+### 📌 This query provides an overview of the distribution of unique users in different AB-groups:
 
 ```sql
 
@@ -53,3 +53,21 @@ FROM ProductData.ProjectName_product -- database_and_tableview_example
 WHERE  ab_group LIKE '%01_001%' -- ab_group_number_example
 GROUP BY app_version, ab_group
 ORDER BY app_version, ab_group
+```
+📌 User Activity by Ads
+### 📌 As my expertise primarily revolves around mobile game development, the role of advertising monetization is crucial. This includes analyzing user interactions with ads. The following SQL query retrieves the activity details of a specific user regarding ad views:
+
+```sql
+
+SELECT	created_at,
+	JSONExtractString(base_parameters,'type') AS ad_type,
+	JSONExtractString(base_parameters,'ad_placement') AS ad_placement,
+	JSONExtractString(base_parameters,'status') AS ad_status,
+	base_parameters -- global_events_example; used in json
+FROM AdjustData.RealTimeAnalytics -- database_and_tableview_example
+WHERE toDate(created_at) = today()
+AND event_name = 'AdView'
+AND user_id = 'EF8C20B5-6CBD-4EF3-A3A5-ADDFCA1DF335' -- user_id_example
+ORDER BY created_at DESC
+
+```
