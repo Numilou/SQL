@@ -34,7 +34,7 @@ SELECT 	created_at,
 	event_name,
 	JSONExtractString(base_parameters, 'ab_group') AS ab_group,
         base_parameters
-FROM AdjustData.RealTimeAnalytics
-WHERE user_id = 'EF8C20B5-6CBD-4EF3-A3A5-ADDFCA1DF335'
+FROM AdjustData.RealTimeAnalytics1
+WHERE user_id = 'IDFA or GAID'
 AND toDate(created_at) = today()
 ORDER BY created_at DESC
