@@ -126,5 +126,9 @@ GROUP BY ad_revenue_network
 ORDER BY impressions DESC
 
 ```
-*Thanks for making it to the end!* 🕊️  
-*Regards, Ivanova D.A.*
+---
+
+Thank you for reviewing this documentation! 🕊️ If you have any questions or need further clarification, don't hesitate to reach out. I'm always happy to help.
+
+Best regards,  
+**Ivanova D.A.** 🕊️
