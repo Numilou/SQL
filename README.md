@@ -56,7 +56,7 @@ ORDER BY app_version, ab_group
 ```
 ## 📚 User Activity by Ads
 
-### 📌 As my expertise primarily revolves around mobile game development, the role of advertising monetization is crucial. This includes analyzing user interactions with ads. The following SQL query retrieves the activity details of a specific user regarding ad views:
+### 📌 This includes analyzing user interactions with ads. The following SQL query retrieves the activity details of a specific user regarding ad views:
 
 ```sql
 
