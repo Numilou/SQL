@@ -128,7 +128,7 @@ ORDER BY impressions DESC
 ```
 ---
 
-Thank you for reviewing this documentation! 🕊️ If you have any questions or need further clarification, don't hesitate to reach out. I'm always happy to help.
+Thank you for reviewing this documentation! If you have any questions or need further clarification, don't hesitate to reach out. I'm always happy to help.
 
 Best regards,  
 **Ivanova D.A.** 🕊️
