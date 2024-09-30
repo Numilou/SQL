@@ -38,6 +38,7 @@ FROM AdjustData.RealTimeAnalytics1
 WHERE user_id = 'IDFA or GAID'
 AND toDate(created_at) = today()
 ORDER BY created_at DESC
+```
 
 ## 📚 Count Users by AB-Group
 
