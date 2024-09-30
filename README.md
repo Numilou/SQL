@@ -72,7 +72,7 @@ ORDER BY created_at DESC
 ```
 ## 📚 Users ANR by ads
 
-### 📌 
+### 📌 One important metric to analyze is the ad_status = Fail, which indicates a failure during ad viewing. The following SQL query retrieves the activity details of a specific user (tester) related to ad views and their statuses:
 
 ```sql
 
@@ -89,7 +89,7 @@ ORDER BY count DESC
 ```
 ## 📚 Users activity by ad network used
 
-### 📌 
+### 📌 The following SQL query can help analyze user activity related to ad performance:
 
 ```sql
 SELECT	app_name,
@@ -110,7 +110,7 @@ ORDER BY created_at DESC
 
 ## 📚 Count networks activity
 
-### 📌
+### 📌 To assess the stability of ad networks at an aggregate level, you can use the following query. This will return data for all networks integrated into the product:
 
 ```sql
 SELECT	ad_network AS networks,
